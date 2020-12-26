@@ -54,7 +54,7 @@ public class Day01 extends DayBase {
 
     private List<Integer> getIntegers() {
         String inputString = getHttpInput();
-        return Arrays.stream(inputString.split("\n"))
+        return Arrays.stream(inputString.split(NEW_LINE))
                 .map(v -> Integer.parseInt(v.trim()))
                 .collect(Collectors.toUnmodifiableList());
     }

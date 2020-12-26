@@ -14,6 +14,7 @@ public abstract class DayBase implements DailyChallenge {
     private static final String USER_SESSION_COOKIE_VALUE =
             "session=ITS_A_SECRET";
     private static final String INPUT_REQUEST_METHOD = "GET";
+    protected static final String NEW_LINE = "\n";
 
     @Override
     public String toString() {
@@ -53,7 +54,7 @@ public abstract class DayBase implements DailyChallenge {
             String inputLine;
             while ((inputLine = reader.readLine()) != null) {
                 content.append(inputLine);
-                content.append("\n");
+                content.append(NEW_LINE);
             }
             reader.close();
             connection.disconnect();

@@ -60,7 +60,7 @@ public class Day02 extends DayBase {
 
     private List<String[]> getInput() {
         String inputString = getHttpInput();
-        return Arrays.stream(inputString.split("\n"))
+        return Arrays.stream(inputString.split(NEW_LINE))
                 .map(v -> {
                     String[] firstSplit = v.trim().split(":");
                     String[] secondSplit = firstSplit[0].split(" ");
