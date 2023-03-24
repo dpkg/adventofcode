@@ -1,6 +1,6 @@
 package com.dpkg.adventofcode;
 
-import com.dpkg.adventofcode.y2020.Day01;
+import com.dpkg.adventofcode.year2020.Day01;
 
 import java.io.BufferedReader;
 import java.io.IOException;

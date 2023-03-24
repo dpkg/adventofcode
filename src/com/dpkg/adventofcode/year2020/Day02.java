@@ -1,4 +1,4 @@
-package com.dpkg.adventofcode.y2020;
+package com.dpkg.adventofcode.year2020;
 
 import com.dpkg.adventofcode.DayBase;
 

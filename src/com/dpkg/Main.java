@@ -1,9 +1,9 @@
 package com.dpkg;
 
 import com.dpkg.adventofcode.DailyChallenge;
-import com.dpkg.adventofcode.y2020.Day01;
-import com.dpkg.adventofcode.y2020.Day02;
-import com.dpkg.adventofcode.y2020.Day03;
+import com.dpkg.adventofcode.year2020.Day01;
+import com.dpkg.adventofcode.year2020.Day02;
+import com.dpkg.adventofcode.year2020.Day03;
 
 import java.util.Arrays;
 
