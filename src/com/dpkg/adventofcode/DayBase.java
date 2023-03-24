@@ -11,8 +11,10 @@ import java.net.URL;
 public abstract class DayBase implements DailyChallenge {
 
     private static final String COOKIE_PROP_NAME = "Cookie";
+    private static final String SESSION_COOKIE_VALUE =
+            "ITS_A_SECRET";
     private static final String USER_SESSION_COOKIE_VALUE =
-            "session=ITS_A_SECRET";
+            "session=" + SESSION_COOKIE_VALUE;
     private static final String INPUT_REQUEST_METHOD = "GET";
     protected static final String NEW_LINE = "\n";
 
@@ -32,9 +34,14 @@ public abstract class DayBase implements DailyChallenge {
         return Integer.parseInt(getDayName().split("Day")[1]); // assumes the naming format
     }
 
+    private int getYear() {
+        String[] split = this.getClass().getPackageName().split("year");
+        return Integer.parseInt(split[1]);
+    }
+
     private String getPuzzleInputUrl() {
-        String urlFormat = "https://adventofcode.com/2020/day/%d/input";
-        return String.format(urlFormat, getDayNumber());
+        String urlFormat = "https://adventofcode.com/%d/day/%d/input";
+        return String.format(urlFormat, getYear(), getDayNumber());
     }
 
     private String _httpInput;
